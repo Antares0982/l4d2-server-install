@@ -120,8 +120,46 @@ sm_cvar ammo_autoshotgun_max 225
 ```
 systemctl disable polipo
 ```
+## 启动游戏
+返回用户文件夹
+```
+cd
+```
+启动游戏服务器
+```
+./l4d2server start
+```
+查看进程
+```
+ps aux | grep left
+```
+可以查看启动参数是否已经正确写入。
 
-## 游戏内设置
+服务器运行时可以使用指令
+```
+./l4d2server console
+```
+查看游戏控制台。游戏控制台中按下`ctrl+b`，再按下`d`键退出控制台。如果按下`ctrl+c`，游戏服务器会关闭，请不要用这种方法退出控制台。
+
+在控制台中使用
+```
+sm plugins list
+```
+就可以看到成功启用的插件，使用
+```
+sm plugins refresh
+```
+就可以重新加载plugins文件夹中全部插件（不需要关闭服务器或重启）
+关闭服务器使用指令
+```
+./l4d2server stop
+```
+重启服务器使用指令
+```
+./l4d2server restart
+```
+
+## 连接到服务器以及游戏内插件控制
 首先，连接到服务器的方法是控制台连接公网ip。打开游戏，加载好mod之后控制台输入
 ```
 connect <你的公网ip>
