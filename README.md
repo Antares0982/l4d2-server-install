@@ -4,6 +4,8 @@ notes for installing l4d2 server on linux(Debian)
 ## 安装代理
 中国大陆需要安装代理才能下载求生之路服务端(如果服务器在墙外，游戏会有严重的丢包，不推荐)。参考https://github.com/Antares0982/v2ray-linux-install-notes 安装v2ray客户端以及设置polipo。
 
+更多详情参见[v2ray-linux-install-notes](https://github.com/Antares0982/v2ray-linux-install-notes)
+
 ## 下载dedicated server
 浏览https://linuxgsm.com/lgsm/l4d2server/ ，点左边的Install。按照说明添加用户，设置一个强密码（重要！不能用root权限做这些操作，也不能设置和用户名一样的密码！！！不然等着服务器被人拿去挖矿= =）
 ```
@@ -113,14 +115,9 @@ sm_cvar ammo_autoshotgun_max 225
 
 现在可以安装插件了。将插件传输到`/home/l4d2/serverfiles/left4dead2/addons/sourcemod/plugins`中（用户需是l4d2，否则无法读取）。不需要的插件移到`/home/l4d2/serverfiles/left4dead2/addons/sourcemod/plugins/disabled`中，在plugins文件夹中的插件在服务器开启时一定会启用。但是请注意，不要将原本那些admin相关的插件停用，否则管理员功能将无法使用。
 
-## 关闭polipo服务自启动
-如果不关闭polipo，服务器所有流量都会走代理，延迟和丢包会多严重就不必说了。
+## 关闭polipo服务及其自启动
+如果不关闭polipo，服务器所有流量都会走代理，造成一些软件不必要的卡顿。
 
-关闭polipo服务
-```
-systemctl disable polipo
-systemctl stop polipo
-```
 更多详情参见[v2ray-linux-install-notes](https://github.com/Antares0982/v2ray-linux-install-notes)
 
 ## 启动游戏
