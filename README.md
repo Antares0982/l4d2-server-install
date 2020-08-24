@@ -119,7 +119,10 @@ sm_cvar ammo_autoshotgun_max 225
 关闭polipo服务
 ```
 systemctl disable polipo
+systemctl stop polipo
 ```
+更多详情参见[v2ray-linux-install-notes](https://github.com/Antares0982/v2ray-linux-install-notes)
+
 ## 启动游戏
 返回用户文件夹
 ```
