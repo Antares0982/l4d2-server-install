@@ -105,7 +105,7 @@ sm_cvar ammo_autoshotgun_max 225
 ```
 不知道自己的steam id？打开l4d2，进入游戏，开控制台输入`status`，把上面的信息照抄下来就行了。如果想获取你的朋友的id，只需要和他们在同一个游戏里输入`status`。
 
-编辑启动参数：找到`/home/l4d2/lgsm/config-default/config-lgsm/l4d2server`并编辑`_defalut.cfg`，第16行的最大人数改为你的服务器设置的人数，并在第20行字符串末尾加入几个新的参数：
+编辑启动参数：找到`/home/l4d2/lgsm/config-default/config-lgsm/l4d2server`并编辑`_default.cfg`，第16行的最大人数改为你的服务器设置的人数，并在第20行字符串末尾加入几个新的参数：
 ```
 -insecure -nomaster -tickrate 60
 ```
@@ -175,15 +175,3 @@ sv_search_key "whateverthefxxkis"
 -nomaster
 ```
 进入服务器之后，在对话框中发送 `!admin`就可以打开管理员菜单。如果要玩第三方地图，将地图vpk文件传到`/home/l4d2/serverfiles/left4dead2/addons/`中（注意，用户：l4d2），然后用`!admin`指令切换地图就行了。
-
-
-
-
-
-
-
-
-
-
-
-
