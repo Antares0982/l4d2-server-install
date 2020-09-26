@@ -113,6 +113,14 @@ sm_cvar ammo_autoshotgun_max 225
 ```
 第一个参数是防止某些特殊情况下，服务器中魔改过多导致服务器内玩家被VAC封禁。第二个参数是防止被ddos的，非常重要！！！第三个参数是调整tick到60.如果你在l4d2server.cfg里写的是100tick，那么这里的参数60也改为100。如果还想改默认地图的话，也可自行修改，但是其他的参数就不要调整了，尤其是ip和端口。
 
+如果想要开启一个写实模式，在末尾加上参数：
+
+```
++mp_gamemode realism
+```
+
+就可以修改`mp_gamemode`的值，改为写实模式。
+
 现在可以安装插件了。将插件传输到`/home/l4d2/serverfiles/left4dead2/addons/sourcemod/plugins`中（用户需是l4d2，否则无法读取）。不需要的插件移到`/home/l4d2/serverfiles/left4dead2/addons/sourcemod/plugins/disabled`中，在plugins文件夹中的插件在服务器开启时一定会启用。但是请注意，不要将原本那些admin相关的插件停用，否则管理员功能将无法使用。
 
 ## 关闭polipo服务及其自启动
